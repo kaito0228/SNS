@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,47 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SNS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="CZX-gp-Jlq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7t-VS-Xg1">
+                                <rect key="frame" x="0.0" y="879" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="MXC-RN-m4m">
+                                        <connections>
+                                            <action selector="showActivityView:" destination="BYZ-38-t0r" id="wjL-4P-KhH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CZX-gp-Jlq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0SX-bS-H7c"/>
+                            <constraint firstItem="CZX-gp-Jlq" firstAttribute="trailing" secondItem="t7t-VS-Xg1" secondAttribute="trailing" id="Ddp-VG-DV9"/>
+                            <constraint firstItem="t7t-VS-Xg1" firstAttribute="bottom" secondItem="CZX-gp-Jlq" secondAttribute="bottom" id="HJN-Q1-ScY"/>
+                            <constraint firstItem="CZX-gp-Jlq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KE1-A4-2OF"/>
+                            <constraint firstItem="CZX-gp-Jlq" firstAttribute="leading" secondItem="t7t-VS-Xg1" secondAttribute="leading" id="eTx-0B-qQa"/>
+                            <constraint firstItem="CZX-gp-Jlq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fba-gR-u9d"/>
+                            <constraint firstAttribute="trailing" secondItem="CZX-gp-Jlq" secondAttribute="trailing" id="vGy-nf-Dam"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="CZX-gp-Jlq" id="v0D-j9-otp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-50.399999999999999" y="137.4384236453202"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="593.33331298828125" height="896"/>
+    </resources>
 </document>
